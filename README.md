@@ -26,7 +26,7 @@ Most logistics platforms only tell you what's happening *now*. **TRANZITS** lets
 ## ⚙️ Installation & Setup
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/HACKATHON.git
+   git clone https://github.com/YOUR_USERNAME/Supply-Chaiin-Optimization-Project.git
    cd HACKATHON
    ```
 2. **Install dependencies:**
