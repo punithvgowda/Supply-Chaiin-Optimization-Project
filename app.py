@@ -10,7 +10,7 @@ import time
 import math
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = "hackathon-secret-key"
 
 
