@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 import threading
 import time
 import math
+import os
 
 app = Flask(__name__)
 app.secret_key = "hackathon-secret-key"
@@ -346,9 +347,9 @@ def start_disruption_engine():
 
 # ---------------- RUN ----------------
 if __name__ == '__main__':
-    # 🔥 Run background engine ONLY in local dev
-    if app.debug:
-        t = threading.Thread(target=start_disruption_engine, daemon=True)
-        t.start()
+    # ✅ Always run engine (safe for hackathon)
+    t = threading.Thread(target=start_disruption_engine, daemon=True)
+    t.start()
 
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    # ✅ Use Render port
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
